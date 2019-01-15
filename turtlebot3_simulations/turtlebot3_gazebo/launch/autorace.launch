@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_autorace.launch" />
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_autorace_mission.launch" />
+    <include file="$(find turtlebot3_autorace_core)/launch/turtlebot3_autorace_core.launch" />
+    <node pkg="rostopic" type="rostopic" name="rostopic" args="pub -1 /core/decided_mode std_msgs/UInt8 'data: 2'"/>
+</launch>

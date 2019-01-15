@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turtlebot3_autorace</name>
+  <version>1.1.0</version>
+  <description>
+    AutoRace ROS packages for AutoRace with TurtleBot3 (meta package)
+  </description>
+  <maintainer email="aby03@todo.todo">aby03</maintainer>
+  <license>Apache 2.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>turtlebot3_autorace_camera</exec_depend>
+  <exec_depend>turtlebot3_autorace_control</exec_depend>
+  <exec_depend>turtlebot3_autorace_core</exec_depend>
+  <exec_depend>turtlebot3_autorace_detect</exec_depend>
+  <export><metapackage/></export>
+</package>

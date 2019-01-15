@@ -1,0 +1,20 @@
+<launch>
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_autorace.launch" />
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="1" />
+    <arg name="pkg" value="turtlebot3_gazebo" />
+    <arg name="file" value="turtlebot3_autorace_mission.launch" />
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="3" />
+    <arg name="pkg" value="turtlebot3_autorace_core" />
+    <arg name="file" value="turtlebot3_autorace_core.launch" />
+  </include>
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time" value="2" />
+    <arg name="pkg" value="rostopic" />
+    <arg name="file" value="rostopic" />
+    <arg name="value" value="pub -1 /core/decided_mode std_msgs/UInt8 'data: 2'" />
+  </include>
+</launch>
+
